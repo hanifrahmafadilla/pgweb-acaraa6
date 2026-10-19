@@ -436,7 +436,7 @@
             map.addLayer(jalan);
         });
 
-        // 5. GeoJSON Polygon Jumlah Penduduk (Pencarian Nama Kecamatan Full 'WADMKC')
+        // 5. GeoJSON Polygon Jumlah Penduduk 
         var jumlah_penduduk = L.geoJSON(null, {
             style: function (feature) {
                 var p = feature.properties.Penduduk;
@@ -456,7 +456,7 @@
             jumlah_penduduk.addData(data);
             map.addLayer(jumlah_penduduk);
 
-            // Inisialisasi Pencarian Lokasi Berdasarkan 'WADMKC' (Kecamatan)
+            // Inisialisasi Pencarian Lokasi 
             var searchControl = new L.Control.Search({
                 layer: jumlah_penduduk,
                 propertyName: 'WADMKC',
@@ -530,7 +530,7 @@
 
         legend.addTo(map);
 
-        // 8. Scale Bar Oval Kapsul di kiri bawah
+        // 8. Scale Bar
         L.control.scale({
             position: 'bottomleft',
             metric: true,
